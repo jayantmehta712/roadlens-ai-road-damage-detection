@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: roadlens-ai-road-damage
+    runtime: python
+    plan: free
+    buildCommand: python prepare_deploy.py && pip install -r service/requirements.txt && python service/scripts/check_model.py
+    startCommand: gunicorn --chdir service -c gunicorn.conf.py app:app
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: APP_PASSWORD
+        generateValue: true
+      - key: DATA_DIR
+        value: /tmp/roadlens
+      - key: OMP_NUM_THREADS
+        value: '1'
+      - key: OPENBLAS_NUM_THREADS
+        value: '1'

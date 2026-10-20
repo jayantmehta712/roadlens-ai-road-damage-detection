@@ -1,0 +1,30 @@
+{
+  "source_sha256": "f07c5632f37f3a962dc8c90342f33d284fdc0501f275d00d01dde89507b80063",
+  "model_sha256": "6efedcc0c9757ca733eb94106e1f82fd2dd931fd9a9ad39eb9a3dae8e3d6e589",
+  "parts": [
+    {
+      "name": "checkpoint.part01.bin",
+      "sha256": "bd41cdda613710caa4284f10b66a08bfd445fa9f340d17805e1c3c69bc32225b"
+    },
+    {
+      "name": "checkpoint.part02.bin",
+      "sha256": "e1c98da72abb30b08670f6ef38fdcfa146925c4277990214d89cdc2a5c2ceb6a"
+    },
+    {
+      "name": "checkpoint.part03.bin",
+      "sha256": "0821f002eb305309ded12b5ecf9508aaceaceedc55513720c085762c3585d2c3"
+    },
+    {
+      "name": "checkpoint.part04.bin",
+      "sha256": "cfc4c5c30bf70c3ce78ab192f357845c872feaf8b7cf3860a20f5ed76c770d1f"
+    },
+    {
+      "name": "checkpoint.part05.bin",
+      "sha256": "01530fcf1fb15f41672f87ff82543218c3fe8a4facad98e8a5fef24d2f1db450"
+    },
+    {
+      "name": "checkpoint.part06.bin",
+      "sha256": "667f230f18962c9dcf7b7511917fb11f2a816932769c517fb624de1cf4c130ce"
+    }
+  ]
+}
