@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     buildCommand: python prepare_deploy.py && pip install -r service/requirements.txt && python service/scripts/check_model.py
-    startCommand: gunicorn --chdir service -c gunicorn.conf.py app:app
+    startCommand: gunicorn -c service/gunicorn.conf.py --chdir service app:app
     healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION
@@ -21,3 +21,4 @@ services:
         value: '1'
       - key: OPENBLAS_NUM_THREADS
         value: '1'
+

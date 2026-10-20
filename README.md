@@ -10,7 +10,7 @@ Create a Blueprint using render.yaml. It declares one **Free** Python web servic
 
 Build: `python prepare_deploy.py && pip install -r service/requirements.txt && python service/scripts/check_model.py`
 
-Start: `gunicorn --chdir service -c gunicorn.conf.py app:app`
+Start: `gunicorn -c service/gunicorn.conf.py --chdir service app:app`
 
 The free instance can sleep and lose uploaded images/history on sleep, restart or redeploy. Export records before that occurs. Persistent hosting requires a separately approved storage plan. This is an academic demonstration, not field-validated safety software.
 
@@ -23,3 +23,4 @@ The source archive includes the full application README, model card, genuine eva
 RDD2022: Arya et al., https://doi.org/10.6084/m9.figshare.21431547 (CC BY 4.0 per the release metadata). The bundled sample road image is attributed in DATASET_ATTRIBUTION.md inside the source archive.
 
 Project team: Jayant Mehta, Kavya, Kashish Vohra and Ayush Sharma. Dronacharya Group of Institutions, academic session 2026–27.
+
